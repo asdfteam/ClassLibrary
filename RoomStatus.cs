@@ -5,6 +5,7 @@
         Available,
         Busy,
         Cleaning,
-        Maintenance
+        Maintenance,
+        Service
     }
 }
