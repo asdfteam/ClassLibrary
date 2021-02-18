@@ -1,23 +1,32 @@
-﻿namespace HotelLibrary
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+
+namespace HotelLibrary
 {
     public class Room
     {
-        public int RoomNumber { get; }
-        public RoomStatus Status { get; set; }
+        [Key]
+        public int RoomNumber { get; set; }
+        public RoomStatus RoomStatus { get; set; }
         public int SingleBed { get; set; }
         public int DoubleBed { get; set; }
 
-        public Room(int roomNumber, int singleBed, int doubleBed)
+
+        public Room()
+        {
+
+        }
+        public Room(int roomNumber, RoomStatus roomStatus, int singleBed, int doubleBed)
         {
             this.RoomNumber = roomNumber;
             this.SingleBed = singleBed;
             this.DoubleBed = doubleBed;
-            this.Status = RoomStatus.Available;
+            this.RoomStatus = roomStatus;
         }
 
         public void SetStatus(RoomStatus status)
         {
-            this.Status = status;
+            this.RoomStatus = status;
         }
     }
 }
