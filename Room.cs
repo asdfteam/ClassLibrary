@@ -1,32 +1,25 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
 namespace HotelLibrary
 {
+    [Table("Rooms")]
     public class Room
-    {
+    {   
+        [Column("roomNumber")]
         [Key]
         public int RoomNumber { get; set; }
-        public RoomStatus RoomStatus { get; set; }
+        [Column("roomStatus")]
+        public string RoomStatus { get; set; }
+        [Column("singleBed")]
         public int SingleBed { get; set; }
+        [Column("doubleBed")]
         public int DoubleBed { get; set; }
-
 
         public Room()
         {
 
-        }
-        public Room(int roomNumber, RoomStatus roomStatus, int singleBed, int doubleBed)
-        {
-            this.RoomNumber = roomNumber;
-            this.SingleBed = singleBed;
-            this.DoubleBed = doubleBed;
-            this.RoomStatus = roomStatus;
-        }
-
-        public void SetStatus(RoomStatus status)
-        {
-            this.RoomStatus = status;
         }
     }
 }
