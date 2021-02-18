@@ -2,7 +2,7 @@
 
 namespace HotelLibrary
 {
-    /** Processed at POST /reservations
+    /** Processed at POST /reservations/{customerId}
      *  Should enter API as:
      *  
      *  {
