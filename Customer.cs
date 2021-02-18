@@ -1,21 +1,21 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HotelLibrary
-{
+{   
+    [Table("Customers")]
     public class Customer
     {
-        public int Id { get; } 
-        public string Name { get; set; }
-        public Reservation Reservation { get; set; }
+        [Key]
+        [Column("customerId")]
+        public int CustomerId { get; }
+        [Column("customerName")]
+        public string CustomerName { get; set; }
 
-        public Customer(string name)
+        public Customer()
         {
-            this.Name = name;
-        }
-        public Customer(string name, Reservation reservation)
-        {
-            this.Name = name;
-            this.Reservation = reservation;
+
         }
     }
 }
