@@ -2,6 +2,15 @@
 
 namespace HotelLibrary
 {
+    /** Processed at POST /reservations
+     *  Should enter API as:
+     *  
+     *  {
+     *      roomNumber: X,
+     *      startDate:  XX-XX-XX,
+     *      endDate:    XX-XX-XX,
+     *  }
+     */
     class CreateReservationRequest
     {
         public DateTime StartDate { get; set; }
