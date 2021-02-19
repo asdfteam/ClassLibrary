@@ -9,7 +9,7 @@ namespace HotelLibrary
     {
         [Key]
         [Column("customerId")]
-        public int CustomerId { get; }
+        public int CustomerId { get; set;  }
         [Column("customerName")]
         public string CustomerName { get; set; }
 

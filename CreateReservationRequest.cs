@@ -11,17 +11,14 @@ namespace HotelLibrary
      *      endDate:    XX-XX-XX,
      *  }
      */
-    class CreateReservationRequest
+    public class CreateReservationRequest
     {
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public int RoomNumber { get; set; }
 
-        public CreateReservationRequest(int RoomNum, DateTime start, DateTime end)
+        public CreateReservationRequest()
         {
-            RoomNumber = RoomNum;
-            StartDate = start;
-            EndDate = end;
         }
     }
 }
