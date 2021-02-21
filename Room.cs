@@ -16,6 +16,8 @@ namespace HotelLibrary
         public int SingleBed { get; set; }
         [Column("doubleBed")]
         public int DoubleBed { get; set; }
+        [Column("note")]
+        public string Note { get; set; }
 
         public Room()
         {
