@@ -2,11 +2,12 @@
 
 namespace HotelLibrary
 {
-    /** Processed at POST /reservations/{customerId}
+    /** serialized and processed at POST /reservations/{customerId}
      *  Should enter API as:
      *  
      *  {
-     *      roomNumber: X,
+     *      doubleBeds: X,
+     *      singleBeds: X,
      *      startDate:  XX-XX-XX,
      *      endDate:    XX-XX-XX,
      *  }
@@ -15,7 +16,8 @@ namespace HotelLibrary
     {
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public int RoomNumber { get; set; }
+        public int DoubleBeds { get; set; }
+        public int SingleBeds { get; set; }
 
         public CreateReservationRequest()
         {
