@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace HotelLibrary
 {
@@ -12,6 +11,9 @@ namespace HotelLibrary
         public string Username { get; set; }
         public string Password { get; set; }
 
+        public CustomerLogin()
+        {
+        }
         public CustomerLogin(string username, string password)
         {
             this.Username = username;
